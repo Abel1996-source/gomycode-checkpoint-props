@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import Profil from './profile/Profil';
+import abel from './profile/Abel.jpg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profil fullName="Konan Koaukou Abel" bio="Yvapo" profession="Développeur fullstack react js" handleName={handleName}>
+        <img style={{border:"6px solid purple", borderRadius:"50%",objectFit:"cover", marginTop:"2rem"}} src={abel} alt=""/>
+      </Profil>
     </div>
   );
+  
 }
-
+function handleName(){
+  return (alert("KONAN KOUAKOU ABEL"))
+}
 export default App;
